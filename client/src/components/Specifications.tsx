@@ -1,4 +1,5 @@
 import { Battery, Cpu, Ruler, Zap } from "lucide-react";
+import productImage from "@assets/gemini-2.5-flash-image-preview_A_high-resolution_product_render_of_the_I-ON_wearable_device_shown_in_a_clean_front-facing_view._Mi-0 1_1759489531363.png";
 
 const specs = [
   {
@@ -41,30 +42,75 @@ export default function Specifications() {
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {specs.map((spec, index) => (
-            <div 
-              key={index}
-              className="text-center space-y-4 p-6 rounded-2xl hover-elevate transition-all duration-300"
-              data-testid={`spec-${index}`}
-            >
-              <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-chart-2/10">
-                <spec.icon className="h-8 w-8 text-primary" strokeWidth={1.5} />
-              </div>
-              
-              <div className="space-y-1">
-                <p className="text-sm font-medium text-muted-foreground">
-                  {spec.label}
-                </p>
-                <p className="text-2xl font-bold text-foreground">
-                  {spec.value}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {spec.detail}
-                </p>
+        <div className="relative max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+            {/* Left Column - First 2 specs */}
+            <div className="space-y-12">
+              {specs.slice(0, 2).map((spec, index) => (
+                <div 
+                  key={index}
+                  className="text-center lg:text-right space-y-4"
+                  data-testid={`spec-${index}`}
+                >
+                  <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-chart-2/10">
+                    <spec.icon className="h-8 w-8 text-primary" strokeWidth={1.5} />
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <p className="text-sm font-medium text-muted-foreground">
+                      {spec.label}
+                    </p>
+                    <p className="text-2xl font-bold text-foreground">
+                      {spec.value}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {spec.detail}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Center - Product Image */}
+            <div className="flex items-center justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-chart-2/20 rounded-full blur-3xl" />
+                <img 
+                  src={productImage} 
+                  alt="AiriGo device - pocket-sized AI air quality companion"
+                  className="relative w-full max-w-xs mx-auto drop-shadow-2xl"
+                  data-testid="img-specs-product"
+                />
               </div>
             </div>
-          ))}
+            
+            {/* Right Column - Last 2 specs */}
+            <div className="space-y-12">
+              {specs.slice(2, 4).map((spec, index) => (
+                <div 
+                  key={index + 2}
+                  className="text-center lg:text-left space-y-4"
+                  data-testid={`spec-${index + 2}`}
+                >
+                  <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-chart-2/10">
+                    <spec.icon className="h-8 w-8 text-primary" strokeWidth={1.5} />
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <p className="text-sm font-medium text-muted-foreground">
+                      {spec.label}
+                    </p>
+                    <p className="text-2xl font-bold text-foreground">
+                      {spec.value}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {spec.detail}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
