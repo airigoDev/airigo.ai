@@ -28,7 +28,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-specs">
+                <a href="#specifications-section" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-specs">
                   Specifications
                 </a>
               </li>

@@ -39,7 +39,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button 
                 size="lg" 
-                className="text-base px-8 py-6 rounded-full"
+                className="rounded-full"
                 onClick={handlePreOrder}
                 data-testid="button-preorder-hero"
               >
@@ -49,7 +49,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-base px-8 py-6 rounded-full bg-background/60 backdrop-blur-sm"
+                className="rounded-full bg-background/60 backdrop-blur-sm"
                 onClick={() => {
                   const featuresSection = document.getElementById("features-section");
                   if (featuresSection) {

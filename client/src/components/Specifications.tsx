@@ -29,7 +29,7 @@ const specs = [
 
 export default function Specifications() {
   return (
-    <section className="py-20 sm:py-32 bg-background">
+    <section id="specifications-section" className="py-20 sm:py-32 bg-background">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight">

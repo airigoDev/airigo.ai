@@ -33,7 +33,7 @@ export default function CTA() {
             <Button 
               size="lg" 
               variant="outline"
-              className="text-base px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 border-white/20"
+              className="rounded-full bg-white text-primary hover:bg-white/90 border-white/20"
               onClick={handlePreOrder}
               data-testid="button-preorder-cta"
             >
