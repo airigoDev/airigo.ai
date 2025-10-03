@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package, Shield, Sparkles } from "lucide-react";
+import ctaBackground from "@assets/22633c0c9a9263eac15dc7b3f4b754349fe182c0_1759488090224.jpg";
 
 export default function CTA() {
   const handlePreOrder = () => {
@@ -8,9 +9,15 @@ export default function CTA() {
   };
 
   return (
-    <section id="cta-section" className="py-20 sm:py-32 bg-gradient-to-br from-primary via-primary to-chart-2 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
+    <section id="cta-section" className="py-20 sm:py-32 relative overflow-hidden">
+      <div className="absolute inset-0">
+        <img 
+          src={ctaBackground} 
+          alt="Lush green forest with natural sunlight"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
+      </div>
       
       <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <div className="text-center space-y-8">
