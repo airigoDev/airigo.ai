@@ -22,8 +22,8 @@ const specs = [
   {
     icon: Zap,
     label: "Ion Output",
-    value: "10M ions/sec",
-    detail: "Adjustable intensity"
+    value: "750,000 ions/cm³",
+    detail: "Japan Association of Ion certified"
   }
 ];
 
