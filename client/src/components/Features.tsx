@@ -1,5 +1,6 @@
 import { Brain, Sparkles, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import productShowcase from "@assets/product-show-case_1759489457771.png";
 
 const features = [
   {
@@ -24,8 +25,15 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features-section" className="py-20 sm:py-32 bg-background">
-      <div className="container mx-auto px-6 max-w-7xl">
+    <section id="features-section" className="py-20 sm:py-32 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <img 
+          src={productShowcase} 
+          alt="AiriGo product showcase in various settings"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight">
             Smart Technology,
