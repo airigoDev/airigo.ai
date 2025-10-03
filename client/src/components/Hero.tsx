@@ -25,14 +25,24 @@ export default function Hero() {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-xl ml-auto text-right">
           <div className="space-y-6">
+            <div className="inline-block">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6">
+                Now Available for Pre-Order
+              </span>
+            </div>
+            
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
-              BREATHE SMART
+              Every Breath,
               <span className="block italic font-bold">
-                LIVE FREE
+                Smarter
               </span>
             </h1>
             
-            <div className="pt-4">
+            <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+              Meet AiriGo, your pocket-sized AI air companion. Combining friendly design with serious AI-powered technology to scan air quality and generate cleaner air bubbles wherever you go.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-end pt-4">
               <Button 
                 size="lg" 
                 variant="outline"
@@ -40,8 +50,16 @@ export default function Hero() {
                 onClick={handlePreOrder}
                 data-testid="button-preorder-hero"
               >
-                PRE-ORDER NOW
+                Pre-Order Now
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+            </div>
+            
+            <div className="flex items-center gap-8 text-sm text-white/80 justify-end pt-4">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-white" />
+                <span>Free Shipping</span>
+              </div>
             </div>
           </div>
         </div>
