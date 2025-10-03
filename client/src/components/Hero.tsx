@@ -12,13 +12,20 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-background to-muted/30">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,212,170,0.08),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(74,144,226,0.06),transparent_50%)]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage} 
+          alt="Person relaxing peacefully on grass wearing AiriGo device for clean air"
+          className="w-full h-full object-cover"
+          data-testid="img-hero-product"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/50" />
+      </div>
       
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          <div className="text-center lg:text-left space-y-8">
+        <div className="max-w-2xl">
+          <div className="space-y-8">
             <div className="inline-block">
               <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
                 Now Available for Pre-Order
@@ -32,11 +39,11 @@ export default function Hero() {
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
               Meet AiriGo, your pocket-sized AI air companion. Combining friendly design with serious AI-powered technology to scan air quality and generate cleaner air bubbles wherever you go.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
                 size="lg" 
                 className="rounded-full"
@@ -62,23 +69,11 @@ export default function Hero() {
               </Button>
             </div>
             
-            <div className="flex items-center gap-8 text-sm text-muted-foreground justify-center lg:justify-start pt-4">
+            <div className="flex items-center gap-8 text-sm text-muted-foreground pt-4">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>Free Shipping</span>
               </div>
-            </div>
-          </div>
-          
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-chart-2/20 rounded-full blur-3xl" />
-            <div className="relative animate-float">
-              <img 
-                src={heroImage} 
-                alt="Person relaxing peacefully on grass wearing AiriGo device for clean air"
-                className="w-full max-w-lg mx-auto rounded-3xl drop-shadow-2xl"
-                data-testid="img-hero-product"
-              />
             </div>
           </div>
         </div>
