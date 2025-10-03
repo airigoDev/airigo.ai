@@ -1,5 +1,6 @@
 import { MapPin, Plane, Briefcase } from "lucide-react";
 import cityWalkingImage from "@assets/d4c7a7418ec6c61c4bc4299295e45e9e38cf2b9e_1759487470297.png";
+import workingIndoorsImage from "@assets/3fb6b1b40823ab883d878e87d37b86df701feecb_1759487528701.png";
 
 const benefits = [
   {
@@ -23,8 +24,8 @@ const benefits = [
     title: "Working Indoors",
     description: "Create your own clean air workspace. Silent operation won't disturb colleagues while improving focus and reducing fatigue in any indoor environment.",
     stats: ["Whisper-quiet <25dB", "Desk-friendly design", "Smart auto-adjust mode"],
-    image: null,
-    imageAlt: ""
+    image: workingIndoorsImage,
+    imageAlt: "Professional woman wearing AiriGo while working at her office desk"
   }
 ];
 
