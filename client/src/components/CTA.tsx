@@ -44,7 +44,7 @@ export default function CTA() {
               onClick={handlePreOrder}
               data-testid="button-preorder-cta"
             >
-              Pre-Order Now - $199
+              Pre-Order Now - $99
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
