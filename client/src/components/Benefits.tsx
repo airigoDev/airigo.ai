@@ -1,6 +1,7 @@
 import { MapPin, Plane, Briefcase } from "lucide-react";
 import cityWalkingImage from "@assets/d4c7a7418ec6c61c4bc4299295e45e9e38cf2b9e_1759487470297.png";
 import workingIndoorsImage from "@assets/3fb6b1b40823ab883d878e87d37b86df701feecb_1759487528701.png";
+import travelingImage from "@assets/travelling_1759487634343.png";
 
 const benefits = [
   {
@@ -16,8 +17,8 @@ const benefits = [
     title: "Traveling",
     description: "Your perfect travel companion. Compact enough for any bag, powerful enough to keep you breathing clean air in airports, planes, and hotel rooms.",
     stats: ["TSA-approved design", "Global air quality database", "USB-C fast charging"],
-    image: null,
-    imageAlt: ""
+    image: travelingImage,
+    imageAlt: "Woman relaxing outdoors wearing AiriGo device while traveling"
   },
   {
     icon: Briefcase,
