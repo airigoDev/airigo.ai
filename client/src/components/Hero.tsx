@@ -38,10 +38,6 @@ export default function Hero() {
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-white/90 leading-relaxed font-medium">
-              Your pocket-sized AI air companion
-            </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-end pt-4">
               <Button 
                 size="lg" 
