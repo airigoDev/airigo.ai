@@ -67,10 +67,6 @@ export default function Hero() {
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>Free Shipping</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary" />
-                <span>30-Day Trial</span>
-              </div>
             </div>
           </div>
           
