@@ -4,8 +4,8 @@ import ctaBackground from "@assets/22633c0c9a9263eac15dc7b3f4b754349fe182c0_1759
 
 export default function CTA() {
   const handlePreOrder = () => {
-    console.log("Pre-order CTA button clicked");
-    alert("Thank you for your interest! Pre-order functionality will be available soon.");
+    console.log("Pre order CTA button clicked");
+    alert("Thank you for your interest! Pre order functionality will be available soon.");
   };
 
   return (
@@ -33,7 +33,7 @@ export default function CTA() {
           </h2>
           
           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of early adopters who are already experiencing cleaner air. Pre-order AiriGo today and get exclusive launch pricing.
+            Join thousands of early adopters who are already experiencing cleaner air. Pre order AiriGo today and get exclusive launch pricing.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -44,7 +44,7 @@ export default function CTA() {
               onClick={handlePreOrder}
               data-testid="button-preorder-cta"
             >
-              Pre-Order Now - $99
+              Pre Order Now - $99
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

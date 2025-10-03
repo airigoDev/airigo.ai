@@ -4,7 +4,7 @@ import heroImage from "@assets/hero_1759488484268.png";
 
 export default function Hero() {
   const handlePreOrder = () => {
-    console.log("Pre-order button clicked");
+    console.log("Pre order button clicked");
     const ctaSection = document.getElementById("cta-section");
     if (ctaSection) {
       ctaSection.scrollIntoView({ behavior: "smooth" });
@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="space-y-6">
             <div className="inline-block">
               <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6">
-                Now Available for Pre-Order
+                Now Available for Pre Order
               </span>
             </div>
             
@@ -46,7 +46,7 @@ export default function Hero() {
                 onClick={handlePreOrder}
                 data-testid="button-preorder-hero"
               >
-                Pre-Order Now
+                Pre Order Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
