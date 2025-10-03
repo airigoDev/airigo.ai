@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import productImage from "@assets/gemini-2.5-flash-image-preview_A_high-resolution_product_render_of_the_I-ON_wearable_device_shown_in_a_clean_front-facing_view._Mi-0 1_1759486347303.png";
+import heroImage from "@assets/hero_1759488484268.png";
 
 export default function Hero() {
   const handlePreOrder = () => {
@@ -74,9 +74,9 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-chart-2/20 rounded-full blur-3xl" />
             <div className="relative animate-float">
               <img 
-                src={productImage} 
-                alt="AiriGo device - pocket-sized AI air quality companion with glowing blue display"
-                className="w-full max-w-md mx-auto drop-shadow-2xl"
+                src={heroImage} 
+                alt="Person relaxing peacefully on grass wearing AiriGo device for clean air"
+                className="w-full max-w-lg mx-auto rounded-3xl drop-shadow-2xl"
                 data-testid="img-hero-product"
               />
             </div>
