@@ -54,13 +54,6 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
-            
-            <div className="flex items-center gap-8 text-sm text-white/80 justify-end pt-4">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-white" />
-                <span>Free Shipping</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
