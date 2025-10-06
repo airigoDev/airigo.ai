@@ -70,41 +70,43 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover-elevate active-elevate-2 rounded-md text-white"
+            className="md:hidden p-2 hover-elevate active-elevate-2 rounded-md text-white bg-white/10 backdrop-blur-sm border border-white/20"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/20 py-4 space-y-4 bg-black/40 backdrop-blur-md" data-testid="mobile-menu">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-3 py-2 text-sm font-medium text-white/80 hover:text-white hover-elevate active-elevate-2 rounded-md transition-all"
-                data-testid={`link-mobile-${item.id}`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <div className="pt-2">
-              <Button
-                size="default"
-                variant="outline"
-                className="w-full rounded-full bg-white/20 backdrop-blur-sm text-white border-white hover:bg-white/30"
-                onClick={handlePreOrder}
-                data-testid="button-preorder-mobile"
-              >
-                Pre Order Now
-              </Button>
+          <div className="md:hidden mt-2 mb-4 rounded-lg border border-white/20 bg-black/60 backdrop-blur-xl" data-testid="mobile-menu">
+            <div className="p-4 space-y-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="block w-full text-left px-4 py-3 text-base font-medium text-white/90 hover:text-white hover-elevate active-elevate-2 rounded-md transition-all"
+                  data-testid={`link-mobile-${item.id}`}
+                >
+                  {item.label}
+                </button>
+              ))}
+              <div className="pt-3">
+                <Button
+                  size="default"
+                  variant="outline"
+                  className="w-full rounded-full bg-white/20 backdrop-blur-sm text-white border-white hover:bg-white/30"
+                  onClick={handlePreOrder}
+                  data-testid="button-preorder-mobile"
+                >
+                  Pre Order Now
+                </Button>
+              </div>
             </div>
           </div>
         )}
