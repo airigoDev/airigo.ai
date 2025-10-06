@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImage from "@assets/airigo-logo_1759758427602.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,10 +31,14 @@ export default function Header() {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-2xl font-bold text-white hover-elevate active-elevate-2 px-3 py-1 rounded-md transition-all"
+            className="hover-elevate active-elevate-2 rounded-md transition-all"
             data-testid="button-logo"
           >
-            AiriGo
+            <img 
+              src={logoImage} 
+              alt="AiriGo Logo" 
+              className="h-8 w-auto"
+            />
           </button>
 
           {/* Desktop Navigation */}
