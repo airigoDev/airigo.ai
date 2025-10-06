@@ -4,31 +4,31 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted/50 border-t border-border">
+    <footer className="bg-black dark:bg-black border-t border-white/10 dark:border-white/10">
       <div className="container mx-auto px-6 py-12 max-w-7xl">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-foreground">AiriGo</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <h3 className="text-lg font-bold text-white dark:text-white">AiriGo</h3>
+            <p className="text-sm text-white/70 dark:text-white/70 leading-relaxed">
               Your pocket-sized AI air companion, making every breath smarter.
             </p>
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Product</h4>
+            <h4 className="text-sm font-semibold text-white dark:text-white">Product</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#features-section" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-features">
+                <a href="#features-section" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-features">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#cta-section" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-pricing">
+                <a href="#cta-section" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-pricing">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#specifications-section" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-specs">
+                <a href="#specifications-section" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-specs">
                   Specifications
                 </a>
               </li>
@@ -36,20 +36,20 @@ export default function Footer() {
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Company</h4>
+            <h4 className="text-sm font-semibold text-white dark:text-white">Company</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-about">
+                <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-about">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-contact">
+                <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-contact">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover-elevate inline-block" data-testid="link-support">
+                <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-support">
                   Support
                 </a>
               </li>
@@ -57,11 +57,11 @@ export default function Footer() {
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Follow Us</h4>
+            <h4 className="text-sm font-semibold text-white dark:text-white">Follow Us</h4>
             <div className="flex gap-4">
               <a 
                 href="#" 
-                className="p-2 rounded-lg hover-elevate text-muted-foreground"
+                className="p-2 rounded-lg hover-elevate text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white"
                 data-testid="link-twitter"
                 aria-label="X (Twitter)"
               >
@@ -69,7 +69,7 @@ export default function Footer() {
               </a>
               <a 
                 href="#" 
-                className="p-2 rounded-lg hover-elevate text-muted-foreground"
+                className="p-2 rounded-lg hover-elevate text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white"
                 data-testid="link-instagram"
                 aria-label="Instagram"
               >
@@ -77,7 +77,7 @@ export default function Footer() {
               </a>
               <a 
                 href="#" 
-                className="p-2 rounded-lg hover-elevate text-muted-foreground"
+                className="p-2 rounded-lg hover-elevate text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white"
                 data-testid="link-facebook"
                 aria-label="Facebook"
               >
@@ -87,15 +87,15 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-white/10 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-white/70 dark:text-white/70">
             © {currentYear} AiriGo. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover-elevate" data-testid="link-privacy">
+            <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-privacy">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover-elevate" data-testid="link-terms">
+            <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-terms">
               Terms of Service
             </a>
           </div>
