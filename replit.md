@@ -2,11 +2,25 @@
 
 ## Overview
 
-AiriGo is a product landing page for a pocket-sized AI air purification device. The application is a single-page marketing website built with React, showcasing the product's features, benefits, specifications, and providing pre-order functionality. The design follows a premium, Apple-inspired aesthetic with clean layouts, generous white space, and product-first presentation.
+AiriGo is a product landing page for a pocket-sized AI air purification device. The application is a single-page marketing website built with React, showcasing the product's features, benefits, specifications, and providing waitlist signup functionality. The design follows a premium, Apple-inspired aesthetic with clean layouts, generous white space, and product-first presentation.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Recent Changes
+
+### Waitlist Feature Implementation (October 2025)
+- Changed all "Pre Order Now" CTAs to "Join Waitlist"
+- Implemented complete waitlist functionality with:
+  - Waitlist data schema with name and email fields
+  - In-memory storage with duplicate email detection
+  - POST /api/waitlist endpoint with Zod validation
+  - WaitlistDialog component with form and success state
+  - Auto-close dialog after 3 seconds on success
+  - Integration with Header, Hero, and CTA buttons
+  - Error handling for duplicate submissions (409 Conflict)
+  - End-to-end testing completed and verified
 
 ## System Architecture
 
