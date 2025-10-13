@@ -14,7 +14,7 @@ export default function Header() {
     }
   };
 
-  const handlePreOrder = () => {
+  const handleJoinWaitlist = () => {
     scrollToSection("cta-section");
   };
 
@@ -61,10 +61,10 @@ export default function Header() {
               size="default"
               variant="outline"
               className="rounded-full bg-white/20 backdrop-blur-sm text-white border-white hover:bg-white/30"
-              onClick={handlePreOrder}
-              data-testid="button-preorder-header"
+              onClick={handleJoinWaitlist}
+              data-testid="button-waitlist-header"
             >
-              Pre Order Now
+              Join Waitlist
             </Button>
           </div>
 
@@ -101,10 +101,10 @@ export default function Header() {
                   size="default"
                   variant="outline"
                   className="w-full rounded-full bg-white/20 backdrop-blur-sm text-white border-white hover:bg-white/30"
-                  onClick={handlePreOrder}
-                  data-testid="button-preorder-mobile"
+                  onClick={handleJoinWaitlist}
+                  data-testid="button-waitlist-mobile"
                 >
-                  Pre Order Now
+                  Join Waitlist
                 </Button>
               </div>
             </div>

@@ -3,9 +3,9 @@ import { ArrowRight, Package, Shield, Sparkles } from "lucide-react";
 import ctaBackground from "@assets/22633c0c9a9263eac15dc7b3f4b754349fe182c0_1759488090224.jpg";
 
 export default function CTA() {
-  const handlePreOrder = () => {
-    console.log("Pre order CTA button clicked");
-    alert("Thank you for your interest! Pre order functionality will be available soon.");
+  const handleJoinWaitlist = () => {
+    console.log("Join waitlist CTA button clicked");
+    alert("Thank you for your interest! Waitlist functionality will be available soon.");
   };
 
   return (
@@ -33,7 +33,7 @@ export default function CTA() {
           </h2>
           
           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of early adopters who are already experiencing cleaner air. Pre order AiriGo today and get exclusive launch pricing.
+            Join thousands of early adopters who are waiting to experience cleaner air. Sign up for the waitlist today and be the first to know when AiriGo launches.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -41,10 +41,10 @@ export default function CTA() {
               size="lg" 
               variant="outline"
               className="rounded-full bg-white text-primary hover:bg-white/90 border-white/20"
-              onClick={handlePreOrder}
-              data-testid="button-preorder-cta"
+              onClick={handleJoinWaitlist}
+              data-testid="button-waitlist-cta"
             >
-              Pre Order Now - $99
+              Join Waitlist
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
