@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { SiX, SiInstagram, SiFacebook } from "react-icons/si";
 
 export default function Footer() {
@@ -71,12 +72,16 @@ export default function Footer() {
             © {currentYear} AiriGo. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-privacy">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-terms">
-              Terms of Service
-            </a>
+            <Link href="/privacy">
+              <a className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-privacy">
+                Privacy Policy
+              </a>
+            </Link>
+            <Link href="/terms">
+              <a className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-terms">
+                Terms of Service
+              </a>
+            </Link>
           </div>
         </div>
       </div>
