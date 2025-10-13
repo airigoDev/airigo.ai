@@ -6,22 +6,25 @@ import WaitlistDialog from "./WaitlistDialog";
 
 export default function CTA() {
   const [dialogOpen, setDialogOpen] = useState(false);
-  
+
   const handleJoinWaitlist = () => {
     setDialogOpen(true);
   };
 
   return (
-    <section id="cta-section" className="py-20 sm:py-32 relative overflow-hidden">
+    <section
+      id="cta-section"
+      className="py-20 sm:py-32 relative overflow-hidden"
+    >
       <div className="absolute inset-0">
-        <img 
-          src={ctaBackground} 
+        <img
+          src={ctaBackground}
           alt="Lush green forest with natural sunlight"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
       </div>
-      
+
       <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <div className="text-center space-y-8">
           <div className="inline-block">
@@ -30,18 +33,20 @@ export default function CTA() {
               Limited Time Offer
             </span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
             Ready to Breathe Smarter?
           </h2>
-          
+
           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of early adopters who are waiting to experience cleaner air. Sign up for the waitlist today and be the first to know when AiriGo launches.
+            Join thousands of early adopters who are waiting to experience
+            cleaner air. Sign up for the waitlist today and be the first to know
+            when AiriGo launches.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
               className="rounded-full bg-white text-primary hover:bg-white/90 border-white/20"
               onClick={handleJoinWaitlist}
@@ -51,7 +56,7 @@ export default function CTA() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
-          
+
           <div className="flex flex-wrap items-center justify-center gap-8 pt-8 text-white/90">
             <div className="flex items-center gap-2">
               <Package className="h-5 w-5" />
@@ -59,11 +64,11 @@ export default function CTA() {
             </div>
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5" />
-              <span className="text-sm font-medium">30-Day Money Back</span>
+              <span className="text-sm font-medium">30 Day Money Back</span>
             </div>
             <div className="flex items-center gap-2">
               <Sparkles className="h-5 w-5" />
-              <span className="text-sm font-medium">2-Year Warranty</span>
+              <span className="text-sm font-medium">1 Year Warranty</span>
             </div>
           </div>
         </div>
