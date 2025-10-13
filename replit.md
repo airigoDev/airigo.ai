@@ -19,7 +19,10 @@ Preferred communication style: Simple, everyday language.
   - WaitlistDialog component with form and success state
   - Auto-close dialog after 3 seconds on success
   - Integration with Header, Hero, and CTA buttons
-  - Error handling for duplicate submissions (409 Conflict)
+  - Intelligent error handling with friendly messages:
+    - Duplicate email (409): "Already on the list?" with message "This email is already on the waitlist."
+    - Other errors: "Error" with appropriate error message
+    - Form validation: Inline validation messages for invalid inputs
   - End-to-end testing completed and verified
 
 ## System Architecture

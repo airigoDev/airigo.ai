@@ -58,9 +58,36 @@ export default function WaitlistDialog({ open, onOpenChange }: WaitlistDialogPro
       }, 3000);
     },
     onError: (error: any) => {
-      const errorMessage = error.message || "Failed to join waitlist. Please try again.";
+      let errorMessage = "Failed to join waitlist. Please try again.";
+      let errorTitle = "Error";
+      let isDuplicate = false;
+      
+      // Parse error message from API response
+      if (error.message) {
+        try {
+          // Check if it's a 409 (duplicate) error
+          isDuplicate = error.message.startsWith("409:");
+          
+          // Extract JSON from error message (format: "409: {error: ...}")
+          const colonIndex = error.message.indexOf(':');
+          if (colonIndex !== -1) {
+            const jsonPart = error.message.substring(colonIndex + 1).trim();
+            const errorData = JSON.parse(jsonPart);
+            errorMessage = errorData.error || errorMessage;
+          }
+        } catch (e) {
+          // If parsing fails, use a generic message
+          errorMessage = "Failed to join waitlist. Please try again.";
+        }
+      }
+      
+      // Set appropriate title based on error type
+      if (isDuplicate) {
+        errorTitle = "Already on the list?";
+      }
+      
       toast({
-        title: "Error",
+        title: errorTitle,
         description: errorMessage,
         variant: "destructive",
       });
