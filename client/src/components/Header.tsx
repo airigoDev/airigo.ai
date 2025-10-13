@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logoImage from "@assets/airigo-logo_1759758427602.png";
+import WaitlistDialog from "./WaitlistDialog";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -15,7 +17,8 @@ export default function Header() {
   };
 
   const handleJoinWaitlist = () => {
-    scrollToSection("cta-section");
+    setDialogOpen(true);
+    setMobileMenuOpen(false);
   };
 
   const navItems = [
@@ -111,6 +114,7 @@ export default function Header() {
           </div>
         )}
       </div>
+      <WaitlistDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </header>
   );
 }

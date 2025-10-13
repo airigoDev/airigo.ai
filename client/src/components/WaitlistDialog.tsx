@@ -44,10 +44,8 @@ export default function WaitlistDialog({ open, onOpenChange }: WaitlistDialogPro
 
   const mutation = useMutation({
     mutationFn: async (data: InsertWaitlist) => {
-      return apiRequest("/api/waitlist", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
+      const res = await apiRequest("POST", "/api/waitlist", data);
+      return res.json();
     },
     onSuccess: () => {
       setIsSuccess(true);

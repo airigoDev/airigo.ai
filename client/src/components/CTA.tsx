@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package, Shield, Sparkles } from "lucide-react";
 import ctaBackground from "@assets/22633c0c9a9263eac15dc7b3f4b754349fe182c0_1759488090224.jpg";
+import WaitlistDialog from "./WaitlistDialog";
 
 export default function CTA() {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  
   const handleJoinWaitlist = () => {
-    console.log("Join waitlist CTA button clicked");
-    alert("Thank you for your interest! Waitlist functionality will be available soon.");
+    setDialogOpen(true);
   };
 
   return (
@@ -65,6 +68,7 @@ export default function CTA() {
           </div>
         </div>
       </div>
+      <WaitlistDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 }

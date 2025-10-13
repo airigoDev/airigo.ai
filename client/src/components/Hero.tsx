@@ -1,14 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@assets/hero_1759488484268.png";
+import WaitlistDialog from "./WaitlistDialog";
 
 export default function Hero() {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  
   const handleJoinWaitlist = () => {
-    console.log("Join waitlist button clicked");
-    const ctaSection = document.getElementById("cta-section");
-    if (ctaSection) {
-      ctaSection.scrollIntoView({ behavior: "smooth" });
-    }
+    setDialogOpen(true);
   };
 
   return (
@@ -63,6 +63,7 @@ export default function Hero() {
           animation: float 6s ease-in-out infinite;
         }
       `}</style>
+      <WaitlistDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 }
