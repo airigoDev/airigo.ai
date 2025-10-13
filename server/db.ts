@@ -27,3 +27,13 @@ export async function closeMongoClient() {
     client = undefined;
   }
 }
+
+// Graceful shutdown in dev/watch to avoid EADDRINUSE on restart
+if (process.env.NODE_ENV !== "production") {
+  process.once("SIGINT", () => {
+    closeMongoClient().finally(() => process.exit(0));
+  });
+  process.once("SIGTERM", () => {
+    closeMongoClient().finally(() => process.exit(0));
+  });
+}
