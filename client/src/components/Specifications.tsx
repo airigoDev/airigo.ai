@@ -11,7 +11,7 @@ const specs = [
   {
     icon: Battery,
     label: "Battery Life",
-    value: "6-8 hours",
+    value: "20-24 hours",
     detail: "USB-C fast charging"
   },
   {

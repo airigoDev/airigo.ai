@@ -25,6 +25,10 @@ Preferred communication style: Simple, everyday language.
     - Form validation: Inline validation messages for invalid inputs
   - End-to-end testing completed and verified
 
+### Product Specification Updates (October 2025)
+- Updated battery life specification from 6-8 hours to 20-24 hours
+- Applied consistently across Specifications and Benefits sections
+
 ## System Architecture
 
 ### Frontend Architecture

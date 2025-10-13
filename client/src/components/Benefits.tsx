@@ -8,7 +8,7 @@ const benefits = [
     icon: MapPin,
     title: "City Walking",
     description: "Navigate urban environments with confidence. AiriGo monitors pollution levels and creates a protective bubble of clean air as you explore the city.",
-    stats: ["99.9% particle filtration", "Real-time air quality alerts", "6-hour battery life"],
+    stats: ["99.9% particle filtration", "Real-time air quality alerts", "20-24 hour battery life"],
     image: cityWalkingImage,
     imageAlt: "Woman wearing AiriGo device while walking in a busy city environment"
   },
