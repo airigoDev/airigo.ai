@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
+import { getStorage } from "./storage";
 import { insertWaitlistSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
 
@@ -14,28 +14,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/waitlist", async (req, res) => {
     try {
       const result = insertWaitlistSchema.safeParse(req.body);
-      
+
       if (!result.success) {
         const error = fromZodError(result.error);
-        return res.status(400).json({ 
-          error: error.message 
+        return res.status(400).json({
+          error: error.message,
         });
       }
 
       // Check if email already exists
-      const existing = await storage.getWaitlistByEmail(result.data.email);
+      const existing = await getStorage().getWaitlistByEmail(result.data.email);
       if (existing) {
-        return res.status(409).json({ 
-          error: "This email is already on the waitlist" 
+        return res.status(409).json({
+          error: "This email is already on the waitlist",
         });
       }
 
-      const entry = await storage.createWaitlistEntry(result.data);
+      const entry = await getStorage().createWaitlistEntry(result.data);
       return res.status(201).json(entry);
     } catch (error) {
       console.error("Error adding to waitlist:", error);
-      return res.status(500).json({ 
-        error: "Failed to join waitlist. Please try again." 
+      return res.status(500).json({
+        error: "Failed to join waitlist. Please try again.",
       });
     }
   });
