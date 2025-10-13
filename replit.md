@@ -29,6 +29,11 @@ Preferred communication style: Simple, everyday language.
 - Updated battery life specification from 6-8 hours to 20-24 hours
 - Applied consistently across Specifications and Benefits sections
 
+### Footer Simplification (October 2025)
+- Removed the "Company" column from the footer
+- Updated footer layout from 4 columns to 3 columns (AiriGo, Product, Follow Us)
+- Maintained responsive layout for mobile and tablet devices
+
 ## System Architecture
 
 ### Frontend Architecture

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-black dark:bg-black border-t border-white/10 dark:border-white/10">
       <div className="container mx-auto px-6 py-12 max-w-7xl">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-white dark:text-white">AiriGo</h3>
             <p className="text-sm text-white/70 dark:text-white/70 leading-relaxed">
@@ -30,27 +30,6 @@ export default function Footer() {
               <li>
                 <a href="#specifications-section" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-specs">
                   Specifications
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-white dark:text-white">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-about">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-contact">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate inline-block" data-testid="link-support">
-                  Support
                 </a>
               </li>
             </ul>
