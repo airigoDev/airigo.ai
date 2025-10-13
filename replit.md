@@ -34,6 +34,18 @@ Preferred communication style: Simple, everyday language.
 - Updated footer layout from 4 columns to 3 columns (AiriGo, Product, Follow Us)
 - Maintained responsive layout for mobile and tablet devices
 
+### Privacy Policy and Terms of Service Pages (October 2025)
+- Implemented dedicated Privacy Policy page at `/privacy` route
+- Implemented dedicated Terms of Service page at `/terms` route
+- Both pages feature:
+  - Comprehensive legal content with proper sections
+  - "Back to Home" navigation button using Button with `asChild` prop for accessibility
+  - Semantic HTML structure with article and section elements
+  - Consistent styling with prose typography
+  - Maximum width of 4xl for optimal readability
+- Updated footer links to navigate to new pages using wouter's Link component
+- Ensured full accessibility compliance with no nested interactive elements
+
 ## System Architecture
 
 ### Frontend Architecture
