@@ -72,15 +72,11 @@ export default function Footer() {
             © {currentYear} AiriGo. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="/privacy">
-              <a className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-privacy">
-                Privacy Policy
-              </a>
+            <Link href="/privacy" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-privacy">
+              Privacy Policy
             </Link>
-            <Link href="/terms">
-              <a className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-terms">
-                Terms of Service
-              </a>
+            <Link href="/terms" className="text-sm text-white/70 dark:text-white/70 hover:text-white dark:hover:text-white hover-elevate" data-testid="link-terms">
+              Terms of Service
             </Link>
           </div>
         </div>

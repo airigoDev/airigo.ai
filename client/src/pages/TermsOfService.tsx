@@ -6,12 +6,12 @@ export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-6 py-12 max-w-4xl">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8" data-testid="button-back-home">
+        <Button variant="ghost" className="mb-8" asChild>
+          <Link href="/" data-testid="button-back-home">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
-          </Button>
-        </Link>
+          </Link>
+        </Button>
 
         <article className="prose prose-lg dark:prose-invert max-w-none">
           <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
